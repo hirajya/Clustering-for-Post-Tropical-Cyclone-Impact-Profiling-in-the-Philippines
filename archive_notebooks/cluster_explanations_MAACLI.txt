@@ -1,0 +1,45 @@
+=== MAACLI CLUSTER EXPLANATIONS ===
+
+1. DECISION TREE RULES:
+|--- cost_sum <= 127412856.00
+|   |--- dead_sum <= 21.50
+|   |   |--- has_food_sum <= 45.50
+|   |   |   |--- recurrence_rate <= 4.58
+|   |   |   |   |--- class: 0
+|   |   |   |--- recurrence_rate >  4.58
+|   |   |   |   |--- class: 0
+|   |   |--- has_food_sum >  45.50
+|   |   |   |--- class: 1
+|   |--- dead_sum >  21.50
+|   |   |--- class: 2
+|--- cost_sum >  127412856.00
+|   |--- injured_ill_sum <= 12.00
+|   |   |--- class: 1
+|   |--- injured_ill_sum >  12.00
+|   |   |--- class: 2
+
+2. CLUSTER DESCRIPTIONS:
+**Cluster 0 – Moderate-Impact Typhoons Cyclones**
+- cost_sum: 75% between 314,880 and 38,721,840
+- has_food_sum: 75% between 1 and 19
+- dead_sum: 75% between 0 and 3
+- has_hygiene_health_sum: 75% between 0 and 2
+- has_sleeping_essentials_sum: 75% between 0 and 1
+- has_shelter_support_sum: 75% between 0 and 0
+- recurrence_rate: 75% between 2 and 4
+**Cluster 1 – High-Casualty Typhoons Cyclones**
+- cost_sum: 75% between 87,559,243 and 206,898,335
+- has_food_sum: 75% between 38 and 80
+- dead_sum: 75% between 2 and 16
+- has_hygiene_health_sum: 75% between 6 and 15
+- has_sleeping_essentials_sum: 75% between 5 and 19
+- has_shelter_support_sum: 75% between 0 and 8
+- recurrence_rate: 75% between 4 and 5
+**Cluster 2 – Low-Impact Typhoons Cyclones**
+- cost_sum: 75% between 65,528,087 and 192,338,148
+- has_food_sum: 75% between 23 and 56
+- dead_sum: 75% between 56 and 78
+- has_hygiene_health_sum: 75% between 0 and 8
+- has_sleeping_essentials_sum: 75% between 0 and 6
+- has_shelter_support_sum: 75% between 0 and 3
+- recurrence_rate: 75% between 2 and 3

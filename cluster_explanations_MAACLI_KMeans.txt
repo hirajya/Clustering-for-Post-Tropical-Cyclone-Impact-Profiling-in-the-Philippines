@@ -1,0 +1,116 @@
+================================================================================
+MAACLI FRAMEWORK: Multi-Attribute Analysis for Cluster-Level Insights
+KMeans Clustering Results
+================================================================================
+
+CLUSTER SEVERITY CLASSIFICATIONS
+----------------------------------------
+Cluster 0: High-Impact
+  - Severity Score: 5518.57
+  - Rank: 1
+
+Cluster 1: Moderate-Impact
+  - Severity Score: 190.68
+  - Rank: 2
+
+Cluster 2: Low-Impact
+  - Severity Score: 53.11
+  - Rank: 3
+
+
+TOP FEATURES FOR CLUSTER DIFFERENTIATION
+----------------------------------------
+  Region: 0.8766
+  Cost: 0.0746
+  Total: 0.0230
+  Person: 0.0220
+  Partially: 0.0035
+  Brgy: 0.0002
+  Year: 0.0000
+  Duration_in_PAR_Hours: 0.0000
+  Weather_Records_Found: 0.0000
+  Weather_Station_Mapped: 0.0000
+
+
+DECISION TREE RULES
+----------------------------------------
+|--- Region <= 4.00
+|   |--- Person <= 68648.00
+|   |   |--- Cost <= 3344250.00
+|   |   |   |--- Person <= 49126.00
+|   |   |   |   |--- class: 2
+|   |   |   |--- Person >  49126.00
+|   |   |   |   |--- class: 2
+|   |   |--- Cost >  3344250.00
+|   |   |   |--- class: 0
+|   |--- Person >  68648.00
+|   |   |--- class: 0
+|--- Region >  4.00
+|   |--- Region <= 6.50
+|   |   |--- Total <= 3496.00
+|   |   |   |--- Brgy <= 43.00
+|   |   |   |   |--- class: 1
+|   |   |   |--- Brgy >  43.00
+|   |   |   |   |--- class: 1
+|   |   |--- Total >  3496.00
+|   |   |   |--- class: 0
+|   |--- Region >  6.50
+|   |   |--- Cost <= 1274112.50
+|   |   |   |--- Partially <= 1564.50
+|   |   |   |   |--- class: 2
+|   |   |   |--- Partially >  1564.50
+|   |   |   |   |--- class: 2
+|   |   |--- Cost >  1274112.50
+|   |   |   |--- Total <= 2348.50
+|   |   |   |   |--- class: 0
+|   |   |   |--- Total >  2348.50
+|   |   |   |   |--- class: 0
+
+
+DETAILED CLUSTER PROFILES
+----------------------------------------
+
+Cluster 0: High-Impact Typhoons
+Sample Count: 74 (4.2%)
+Key Characteristics:
+  - Families: Median=9035.00
+  - Person: Median=37289.00
+  - Dead: Median=0.00
+  - Injured/Ill: Median=0.00
+  - Missing: Median=0.00
+  - Totally: Median=504.00
+  - Partially: Median=2388.00
+  - Cost: Median=4105881.96
+  - Max_Sustained_Wind_kph: Median=195.00
+  - Max_24hr_Rainfall_mm: Median=47.40
+  - Duration_in_PAR_Hours: Median=114.00
+
+Cluster 1: Moderate-Impact Typhoons
+Sample Count: 658 (37.0%)
+Key Characteristics:
+  - Families: Median=235.00
+  - Person: Median=926.50
+  - Dead: Median=0.00
+  - Injured/Ill: Median=0.00
+  - Missing: Median=0.00
+  - Totally: Median=0.00
+  - Partially: Median=0.00
+  - Cost: Median=0.00
+  - Max_Sustained_Wind_kph: Median=150.00
+  - Max_24hr_Rainfall_mm: Median=94.50
+  - Duration_in_PAR_Hours: Median=124.70
+
+Cluster 2: Low-Impact Typhoons
+Sample Count: 1044 (58.8%)
+Key Characteristics:
+  - Families: Median=91.00
+  - Person: Median=321.00
+  - Dead: Median=0.00
+  - Injured/Ill: Median=0.00
+  - Missing: Median=0.00
+  - Totally: Median=0.00
+  - Partially: Median=0.00
+  - Cost: Median=0.00
+  - Max_Sustained_Wind_kph: Median=115.00
+  - Max_24hr_Rainfall_mm: Median=103.00
+  - Duration_in_PAR_Hours: Median=118.00

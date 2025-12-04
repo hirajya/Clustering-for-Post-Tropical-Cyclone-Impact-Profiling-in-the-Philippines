@@ -1,39 +1,8 @@
 ================================================================================
-MAACLI FRAMEWORK: Multi-Attribute Analysis for Cluster-Level Insights
-KMeans Clustering Results
+MAACLI FRAMEWORK - KMEANS CLUSTERING INSIGHTS
 ================================================================================
 
-CLUSTER SEVERITY CLASSIFICATIONS
-----------------------------------------
-Cluster 0: High-Impact
-  - Severity Score: 5518.57
-  - Rank: 1
-
-Cluster 1: Moderate-Impact
-  - Severity Score: 190.68
-  - Rank: 2
-
-Cluster 2: Low-Impact
-  - Severity Score: 53.11
-  - Rank: 3
-
-
-TOP FEATURES FOR CLUSTER DIFFERENTIATION
-----------------------------------------
-  Region: 0.8766
-  Cost: 0.0746
-  Total: 0.0230
-  Person: 0.0220
-  Partially: 0.0035
-  Brgy: 0.0002
-  Year: 0.0000
-  Duration_in_PAR_Hours: 0.0000
-  Weather_Records_Found: 0.0000
-  Weather_Station_Mapped: 0.0000
-
-
-DECISION TREE RULES
-----------------------------------------
+1. DECISION TREE RULES:
 |--- Region <= 4.00
 |   |--- Person <= 68648.00
 |   |   |--- Cost <= 3344250.00
@@ -67,50 +36,73 @@ DECISION TREE RULES
 |   |   |   |   |--- class: 0
 
 
-DETAILED CLUSTER PROFILES
-----------------------------------------
+2. CLUSTER DESCRIPTIONS:
 
-Cluster 0: High-Impact Typhoons
-Sample Count: 74 (4.2%)
-Key Characteristics:
-  - Families: Median=9035.00
-  - Person: Median=37289.00
-  - Dead: Median=0.00
-  - Injured/Ill: Median=0.00
-  - Missing: Median=0.00
-  - Totally: Median=504.00
-  - Partially: Median=2388.00
-  - Cost: Median=4105881.96
-  - Max_Sustained_Wind_kph: Median=195.00
-  - Max_24hr_Rainfall_mm: Median=47.40
-  - Duration_in_PAR_Hours: Median=114.00
+**Cluster 0 – High-Impact Typhoons**
+- Sample Count: 74 (4.2%)
+- Severity Score: 5518.57
+- Families: 75% between 5007 and 16028
+- Person: 75% between 18547 and 64244
+- Dead: 75% between 0 and 0
+- Injured/Ill: 75% between 0 and 3
+- Missing: 75% between 0 and 0
+- Totally: 75% between 0 and 1292
+- Partially: 75% between 0 and 4742
+- Cost: 75% between 1778975 and 5803680
+- Max_Sustained_Wind_kph: 75% between 155 and 195
+- Max_24hr_Rainfall_mm: 75% between 24 and 149
+- Duration_in_PAR_Hours: 75% between 91 and 122
 
-Cluster 1: Moderate-Impact Typhoons
-Sample Count: 658 (37.0%)
-Key Characteristics:
-  - Families: Median=235.00
-  - Person: Median=926.50
-  - Dead: Median=0.00
-  - Injured/Ill: Median=0.00
-  - Missing: Median=0.00
-  - Totally: Median=0.00
-  - Partially: Median=0.00
-  - Cost: Median=0.00
-  - Max_Sustained_Wind_kph: Median=150.00
-  - Max_24hr_Rainfall_mm: Median=94.50
-  - Duration_in_PAR_Hours: Median=124.70
+**Cluster 1 – Moderate-Impact Typhoons**
+- Sample Count: 658 (37.0%)
+- Severity Score: 190.68
+- Families: 75% between 16 and 842
+- Person: 75% between 57 and 3293
+- Dead: 75% between 0 and 0
+- Injured/Ill: 75% between 0 and 0
+- Missing: 75% between 0 and 0
+- Totally: 75% between 0 and 0
+- Partially: 75% between 0 and 0
+- Cost: 75% between 0 and 0
+- Max_Sustained_Wind_kph: 75% between 110 and 155
+- Max_24hr_Rainfall_mm: 75% between 50 and 117
+- Duration_in_PAR_Hours: 75% between 91 and 154
 
-Cluster 2: Low-Impact Typhoons
-Sample Count: 1044 (58.8%)
-Key Characteristics:
-  - Families: Median=91.00
-  - Person: Median=321.00
-  - Dead: Median=0.00
-  - Injured/Ill: Median=0.00
-  - Missing: Median=0.00
-  - Totally: Median=0.00
-  - Partially: Median=0.00
-  - Cost: Median=0.00
-  - Max_Sustained_Wind_kph: Median=115.00
-  - Max_24hr_Rainfall_mm: Median=103.00
-  - Duration_in_PAR_Hours: Median=118.00
+**Cluster 2 – Low-Impact Typhoons**
+- Sample Count: 1044 (58.8%)
+- Severity Score: 53.11
+- Families: 75% between 13 and 614
+- Person: 75% between 49 and 2288
+- Dead: 75% between 0 and 0
+- Injured/Ill: 75% between 0 and 0
+- Missing: 75% between 0 and 0
+- Totally: 75% between 0 and 0
+- Partially: 75% between 0 and 0
+- Cost: 75% between 0 and 14658
+- Max_Sustained_Wind_kph: 75% between 110 and 195
+- Max_24hr_Rainfall_mm: 75% between 56 and 136
+- Duration_in_PAR_Hours: 75% between 91 and 125
+
+================================================================================
+3. CLUSTERING METRICS:
+- Silhouette Score: 0.1479
+- Calinski-Harabasz Index: 225.3349
+- Davies-Bouldin Index: 2.0925
+
+================================================================================
+4. FEATURE IMPORTANCE:
+- Region: 0.8766
+- Cost: 0.0746
+- Total: 0.0230
+- Person: 0.0220
+- Partially: 0.0035
+- Brgy: 0.0002
+- Year: 0.0000
+- Duration_in_PAR_Hours: 0.0000
+- Weather_Records_Found: 0.0000
+- Weather_Station_Mapped: 0.0000
+
+================================================================================
+5. MODEL COMPARISON SUMMARY:
+- Best Model: DBSCAN (Optuna)
+- KMeans Default vs Optuna Silhouette Improvement: +5.45%
